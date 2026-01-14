@@ -20,13 +20,24 @@ Trigger: `/arch [Context]`
 
 <execution_steps>
 
-## Step 1: Solution Design
+<execution_steps>
 
-- Based on PM Requirements and Analyst Constraints, design the system.
-- **Visual:** Generate a textual File Tree or Mermaid Diagram.
+## Step 1: Intent Detection
 
-## Step 2: Blueprinting
+Analyze the user request to select a Flow:
 
-- Create a technical spec: `.windsurf/memory/architect/[feature_name]_spec.md`.
-- Content: - **Stack Decisions:** Libs/Frameworks to use. - **File Tree:** Exact paths of files to be created. - **Signatures:** Exported functions/interfaces.
+- "Map system / Explain code" -> `.windsurf/flows/architect/map_existing.md`
+- "Design feature / Blueprint" -> `.windsurf/flows/architect/system_design.md`
+- "Visualize flow / Diagram" -> `.windsurf/flows/architect/visualize_flow.md`
+- "Check deps / Stack audit" -> `.windsurf/flows/architect/dependency_check.md`
+
+## Step 2: Execution
+
+Execute the selected Flow Protocol.
+
+## Step 3: Standardization
+
+- Verify that all file paths in the output match the project's existing directory structure.
+- Ensure no deprecated libraries are suggested.
+- **Critical:** If generating code or trees, always use the Project's established naming conventions (camelCase vs snake_case).
   </execution_steps>

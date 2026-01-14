@@ -21,14 +21,19 @@ Trigger: `/dev`
 
 <execution_steps>
 
-## Step 1: Implementation
+## Step 1: Intent Detection
 
-- Read the _latest_ spec file from the Architect.
-- Implement the code in the actual project directory.
-- **Constraint:** Do not deviate from the Architect's file names.
+Analyze request to select a Flow:
 
-## Step 2: Verification
+- "Build feature / New" -> `.windsurf/flows/developer/implement_code.md`
+- "Update file / Change" -> `.windsurf/flows/developer/update_legacy.md`
+- "Fix error / Bug" -> `.windsurf/flows/developer/debug_mode.md`
 
-- Before finishing, check if your code handles the Analyst's edge cases.
-- Add comments explaining complex logic.
-  </execution_steps>
+## Step 2: Execution
+
+Execute the selected Flow Protocol.
+
+## Step 3: Verification
+
+Check if the code compiles (mentally) and matches the Architect's style guide.
+</execution_steps>

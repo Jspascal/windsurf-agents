@@ -20,21 +20,19 @@ Trigger: `/pm [Request]`
 
 <execution_steps>
 
-## Step 1: Analysis
+## Step 1: Intent Detection
 
-- Analyze the user's request.
-- If it's a new feature, decide on a filename (e.g., `feature_login.md`).
+Analyze user request to select a Flow:
 
-## Step 2: Drafting
+- "New Feature" -> `.windsurf/flows/pm/define_feature.md`
+- "Missing stuff" -> `.windsurf/flows/pm/gap_analysis.md`
+- "Plan sprint" -> `.windsurf/flows/pm/plan_sprint.md`
 
-- Create or Update a file in your output directory: `.windsurf/memory/pm/[filename].md`.
-- **Format:**
-  - **Vision:** High level goal.
-  - **Stories:** List of specific user stories.
-  - **Criteria:** Acceptance criteria for each story.
+## Step 2: Execution
 
-## Step 3: Confirmation
+Execute the selected Flow Protocol.
 
-- Output a summary of what you wrote.
-- Ask: "Does this scope look correct?"
-  </execution_steps>
+## Step 3: Handoff
+
+If a feature was defined, ask: "Shall I send this to the Analyst?"
+</execution_steps>

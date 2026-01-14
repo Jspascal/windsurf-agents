@@ -20,13 +20,21 @@ Trigger: `/analyst [Context]`
 
 <execution_steps>
 
-## Step 1: Critique
+## Step 1: Intent Detection
 
-- Look at the active PM requirements.
-- Identify logical gaps, security risks, or missing data fields.
+Analyze the user request to select a Flow:
 
-## Step 2: Documentation
+- "Audit file / Review code" -> `.windsurf/flows/analyst/audit_legacy.md`
+- "Security check / Scan" -> `.windsurf/flows/analyst/vulnerability_scan.md`
+- "Define Schema / Data model" -> `.windsurf/flows/analyst/define_schema.md`
+- "Write tests / Gherkin" -> `.windsurf/flows/analyst/generate_test_cases.md`
 
-- Create a validation file: `.windsurf/memory/analyst/[feature_name]_validation.md`.
-- Document: - **Data Models:** JSON schema or Type definitions. - **Rules:** Business logic rules (e.g., "Password must be > 8 chars"). - **Edge Cases:** "What if X happens?"
+## Step 2: Execution
+
+Execute the selected Flow Protocol.
+
+## Step 3: Verification
+
+- Ensure the output (Schema/Test) covers all edge cases mentioned in the PM requirements.
+- If a risk is found, explicitly label it: **[HIGH RISK]** or **[LOW RISK]**.
   </execution_steps>
