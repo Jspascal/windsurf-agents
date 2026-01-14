@@ -19,13 +19,21 @@ Trigger: `/orch`, `/init`, `/feature`
 
 <execution_steps>
 
-## Step 1: Command Routing
+## Step 1: Intent Detection
 
-- If `/init` -> Create `.windsurf/memory` structure.
-- If `/feature` -> Execute `.windsurf/flows/orchestrator/feature_chain.md`.
-- If `/status` -> Read all `active_*.md` files in memory and summarize.
+Analyze the user request to select a Flow:
 
-## Step 2: State Update
+- "/init" or "Initialize New" -> `.windsurf/flows/orchestrator/init_project.md`
+- "Onboard / Existing Project" -> `.windsurf/flows/orchestrator/onboard_project.md`
+- "/feature" or "Auto Chain" -> `.windsurf/flows/orchestrator/feature_chain.md`
+- "Status Report" -> `.windsurf/flows/orchestrator/status_report.md`
+- "Clear Context" -> `.windsurf/flows/orchestrator/clear_context.md`
 
-Update `.windsurf/memory/_global_context.md` with the latest phase.
+## Step 2: Execution
+
+Execute the selected Flow Protocol.
+
+## Step 3: State Persistence
+
+After the flow completes, update the "Current Phase" in `.windsurf/memory/_global_context.md` if necessary.
 </execution_steps>
