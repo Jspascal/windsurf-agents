@@ -1,0 +1,27 @@
+# Windsurf Agent Router
+
+<system_rules>
+<memory>
+ALWAYS read `project_context.md` for current project state.
+</memory>
+<context_loading>
+When a specific **Agent Persona** is invoked (e.g., @PM, @Architect), you MUST read their specific definition file located in the `.windsurf/` directory before responding.
+</context_loading>
+</system_rules>
+
+## Agent Registry
+
+| Agent               | Trigger         | Definition File             |
+| :------------------ | :-------------- | :-------------------------- |
+| **Project Manager** | `@PM`           | `.windsurf/pm.md`           |
+| **Analyst**         | `@Analyst`      | `.windsurf/analyst.md`      |
+| **Architect**       | `@Architect`    | `.windsurf/architect.md`    |
+| **Developer**       | `@Developer`    | `.windsurf/developer.md`    |
+| **Orchestrator**    | `@Orchestrator` | `.windsurf/orchestrator.md` |
+
+<instruction>
+  If the user says "Hey @Architect", your hidden thought process should be:
+  1. Locate `.windsurf/architect.md`.
+  2. Read the file into context.
+  3. Adopt the persona defined inside.
+</instruction>
