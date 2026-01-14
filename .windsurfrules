@@ -12,14 +12,18 @@ You are the gatekeeper. When a user triggers a command, you MUST execute the spe
 
 ## Command Registry
 
-| Command      | Workflow File                                | Purpose                        |
-| :----------- | :------------------------------------------- | :----------------------------- |
-| **/pm**      | `.windsurf/workflows/agents/pm.md`           | Scope, User Stories, Strategy  |
-| **/analyst** | `.windsurf/workflows/agents/analyst.md`      | Logic Validation, Edge Cases   |
-| **/arch**    | `.windsurf/workflows/agents/architect.md`    | System Design, File Structure  |
-| **/dev**     | `.windsurf/workflows/agents/developer.md`    | Code Implementation            |
-| **/orch**    | `.windsurf/workflows/agents/orchestrator.md` | State Management, Init         |
-| **/feature** | `.windsurf/workflows/agents/orchestrator.md` | **Autonomous Chain Execution** |
+| Command      | Workflow File                                | Purpose                              |
+| :----------- | :------------------------------------------- | :----------------------------------- |
+| **/pm**      | `.windsurf/workflows/agents/pm.md`           | Scope, User Stories, Strategy        |
+| **/analyst** | `.windsurf/workflows/agents/analyst.md`      | Logic Validation, Edge Cases         |
+| **/arch**    | `.windsurf/workflows/agents/architect.md`    | System Design, File Structure        |
+| **/dev**     | `.windsurf/workflows/agents/developer.md`    | Code Implementation                  |
+| **/orch**    | `.windsurf/workflows/agents/orchestrator.md` | State Management, Init               |
+| **/feature** | `.windsurf/workflows/agents/orchestrator.md` | **Autonomous Chain Execution**       |
+| **/scrum**   | `.windsurf/workflows/agents/scrum.md`        | Ceremonies, Flow, Blockers           |
+| **/cmd**     | `.windsurf/workflows/agents/commander.md`    | Command Execution, Git Workflow      |
+| **/ops**     | `.windsurf/workflows/agents/commander.md`    | Package Mgmt, Build & Deploy         |
+| **/idea**    | `.windsurf/workflows/agents/brainstorm.md`   | Brainstorming, Idea Shaping, Outlines|
 
 <global_context>
 ALWAYS read `.windsurf/memory/_global_context.md` before starting any workflow to understand the project state.
