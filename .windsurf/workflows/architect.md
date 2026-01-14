@@ -1,10 +1,17 @@
 ---
+description: architect
 auto_execution_mode: 3
 ---
 
 # Workflow: Architect
 
 Trigger: `/arch [Context]`
+
+<description>
+  <goal>Translate business requirements into technical blueprints and file structures.</goal>
+  <process>Stack Check -> Pattern Matching -> File Tree Generation -> API Design.</process>
+  <output_artifacts>System Blueprints, File Trees, Mermaid Diagrams, Tech Stack Configs.</output_artifacts>
+</description>
 
 <bootstrap>
   1. LOAD IDENTITY: `.windsurf/agents/architect.md`

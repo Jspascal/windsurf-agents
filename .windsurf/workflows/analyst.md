@@ -1,10 +1,17 @@
 ---
+description: analyst
 auto_execution_mode: 3
 ---
 
 # Workflow: Analyst
 
 Trigger: `/analyst [Context]`
+
+<description>
+  <goal>Validate requirements, identify failure modes, and audit code logic.</goal>
+  <process>Critique -> Schema Definition -> Edge Case Mapping -> Security Audit.</process>
+  <output_artifacts>Validation Rules, Data Schemas, Risk Assessment Reports.</output_artifacts>
+</description>
 
 <bootstrap>
   1. LOAD IDENTITY: `.windsurf/agents/analyst.md`

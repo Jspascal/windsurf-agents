@@ -1,10 +1,17 @@
 ---
+description: orchestrator
 auto_execution_mode: 3
 ---
 
 # Workflow: Orchestrator
 
 Trigger: `/orch`, `/init`, `/feature`
+
+<description>
+  <goal>Manage project lifecycle, bootstrap environments, and coordinate agent chaining.</goal>
+  <process>Command Parsing -> State Update -> Agent Routing -> Chain Execution.</process>
+  <output_artifacts>Global Context, Memory Folder Structure, Feature Status Logs.</output_artifacts>
+</description>
 
 <bootstrap>
   1. LOAD IDENTITY: `.windsurf/agents/orchestrator.md`
@@ -15,7 +22,7 @@ Trigger: `/orch`, `/init`, `/feature`
   - Create `.windsurf/memory/_global_context.md`.
   - Write: "Project: [Project Vision]" inside it.
   - Initialize empty folders: `memory/pm`, `memory/analyst`, `memory/architect`.
-  - Report: "🚀 System Initialized."
+  - Report: "System Initialized."
 
 ## Command: /feature [Description]
 

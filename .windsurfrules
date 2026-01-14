@@ -10,7 +10,7 @@ You are the gatekeeper. When a user triggers a command, you MUST execute the spe
   </instruction>
 </system_core>
 
-## 🎮 Command Registry
+## Command Registry
 
 | Command      | Workflow File                                | Purpose                        |
 | :----------- | :------------------------------------------- | :----------------------------- |

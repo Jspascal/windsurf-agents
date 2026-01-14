@@ -1,10 +1,17 @@
 ---
+description: pm
 auto_execution_mode: 3
 ---
 
 # Workflow: PM
 
 Trigger: `/pm [Request]`
+
+<description>
+  <goal>Convert vague user intent into structured, actionable product requirements.</goal>
+  <process>Ingest Request -> Gap Analysis -> User Story Definition -> Acceptance Criteria.</process>
+  <output_artifacts>PRD (Product Requirement Doc), User Stories, Sprint Backlog.</output_artifacts>
+</description>
 
 <bootstrap>
   1. LOAD IDENTITY: `.windsurf/agents/pm.md`

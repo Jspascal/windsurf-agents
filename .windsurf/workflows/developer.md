@@ -1,10 +1,17 @@
 ---
+description: developer
 auto_execution_mode: 3
 ---
 
 # Workflow: Developer
 
 Trigger: `/dev`
+
+<description>
+  <goal>Write, refactor, or debug code based on strict technical specifications.</goal>
+  <process>Fetch Blueprint -> Implement Logic -> Verify Rules -> Commit.</process>
+  <output_artifacts>Source Code Files, Unit Tests, Refactored Components.</output_artifacts>
+</description>
 
 <bootstrap>
   1. LOAD IDENTITY: `.windsurf/agents/developer.md`
