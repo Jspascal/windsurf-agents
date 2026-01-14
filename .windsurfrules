@@ -1,27 +1,26 @@
-# Windsurf Agent Router
+# ⚡ Windsurf Agent Router
 
-<system_rules>
-<memory>
-ALWAYS read `project_context.md` for current project state.
-</memory>
-<context_loading>
-When a specific **Agent Persona** is invoked (e.g., @PM, @Architect), you MUST read their specific definition file located in the `.windsurf/` directory before responding.
-</context_loading>
-</system_rules>
-
-## Agent Registry
-
-| Agent               | Trigger         | Definition File             |
-| :------------------ | :-------------- | :-------------------------- |
-| **Project Manager** | `@PM`           | `.windsurf/pm.md`           |
-| **Analyst**         | `@Analyst`      | `.windsurf/analyst.md`      |
-| **Architect**       | `@Architect`    | `.windsurf/architect.md`    |
-| **Developer**       | `@Developer`    | `.windsurf/developer.md`    |
-| **Orchestrator**    | `@Orchestrator` | `.windsurf/orchestrator.md` |
-
+<system_core>
+<role>Metaprompt Engine</role>
 <instruction>
-  If the user says "Hey @Architect", your hidden thought process should be:
-  1. Locate `.windsurf/architect.md`.
-  2. Read the file into context.
-  3. Adopt the persona defined inside.
-</instruction>
+You are the gatekeeper. When a user triggers a command, you MUST execute the specific **Workflow File**.
+
+    **CRITICAL RULE:** Do not simply chat. You must adopt the Persona defined in the linked Agent file and follow the Workflow steps strictly.
+
+  </instruction>
+</system_core>
+
+## 🎮 Command Registry
+
+| Command      | Workflow File                                | Purpose                        |
+| :----------- | :------------------------------------------- | :----------------------------- |
+| **/pm**      | `.windsurf/workflows/agents/pm.md`           | Scope, User Stories, Strategy  |
+| **/analyst** | `.windsurf/workflows/agents/analyst.md`      | Logic Validation, Edge Cases   |
+| **/arch**    | `.windsurf/workflows/agents/architect.md`    | System Design, File Structure  |
+| **/dev**     | `.windsurf/workflows/agents/developer.md`    | Code Implementation            |
+| **/orch**    | `.windsurf/workflows/agents/orchestrator.md` | State Management, Init         |
+| **/feature** | `.windsurf/workflows/agents/orchestrator.md` | **Autonomous Chain Execution** |
+
+<global_context>
+ALWAYS read `.windsurf/memory/_global_context.md` before starting any workflow to understand the project state.
+</global_context>
