@@ -45,6 +45,9 @@ Execute pre-flight safety checks:
    - Create and switch to a feature or task branch from `develop` using the naming convention:
      - `feature/{ticket-id}-{short-slug}` or `task/{ticket-id}-{short-slug}`.
    - Perform all commits and pushes from that feature/task branch only.
+6. **Windsurf Files Rule**:
+   - Never run `git add .` or any equivalent blanket staging command.
+   - When staging files, always use explicit paths and exclude `.windsurf/` files from staging and commits.
 
 ## Step 3: Command Execution
 
